@@ -49,7 +49,7 @@ export default function List() {
     <section className="bg-[#DBE2DC] min-h-screen p-6">
       {/* className="bg-[#DBE2DC] min-h-screen p-6 pt-28" */}
       <h2 className="text-3xl font-bold text-[#335765] mb-6 text-center">
-        Grocery Items
+        Fresh Picks for You!!
       </h2>
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {fruits.map((product) => (
