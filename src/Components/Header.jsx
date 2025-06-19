@@ -21,10 +21,10 @@ const Header = () => {
         </Link> */}
         <Link to="/" className="flex items-center gap-3">
   <img
-    src={photu}
-    alt="Grocery Logo"
-    className="w-10 h-10 object-contain rounded-full border-2 border-white shadow-md"
-  />
+            src={photu}
+            alt="Grocery Logo"
+            className="w-10 h-10 object-contain"
+          />
   <div>
     <h1 className="text-2xl font-bold text-white tracking-wide leading-tight">
       Fresh<span className="text-[#B6D9E0]">Basket</span>
