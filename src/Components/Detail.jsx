@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import useCartStore from "../Store/Cart";
 import React from "react";
 
-import fruits from "../data/fruits"; // move your fruit array to a new file like /data/fruits.js
+// import fruits from "../data/fruits"; // move your fruit array to a new file like /data/fruits.js
 
 const Detail = () => {
   const { id } = useParams();
