@@ -1,8 +1,8 @@
 import apple from "../assets/fruits/apple.avif";
 import banana from "../assets/fruits/banana.avif";
-import bb from "../assets/fruits/bb.webp"; // Blueberry
+import bb from "../assets/fruits/bb.webp";
 import cherry from "../assets/fruits/cherry.jpg";
-import df from "../assets/fruits/df.webp"; // Dragon Fruit
+import df from "../assets/fruits/df.webp";
 import grapes from "../assets/fruits/grapes.jpg";
 import guava from "../assets/fruits/guava.jpg";
 import kiwi from "../assets/fruits/kiwi.webp";
@@ -13,7 +13,7 @@ import orange from "../assets/fruits/orange.jpg";
 import papaya from "../assets/fruits/papaya.webp";
 import pear from "../assets/fruits/pear.jpg";
 import pineapple from "../assets/fruits/pineapple.webp";
-import pomi from "../assets/fruits/pomi.jpeg"; // Pomegranate
+import pomi from "../assets/fruits/pomi.jpeg";
 import strawberry from "../assets/fruits/strawberry.jpg";
 import watermelon from "../assets/fruits/watermelon.jpg";
 

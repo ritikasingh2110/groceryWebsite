@@ -1,8 +1,8 @@
-// src/components/Pgae.jsx
+
 import React from "react";
 import useCartStore from "../Store/Cart";
 
-const Pgae = () => {
+export default function Pgae(){
   const cart = useCartStore((state) => state.cart);
   const increaseQty = useCartStore((state) => state.increaseQty);
   const decreaseQty = useCartStore((state) => state.decreaseQty);
@@ -61,4 +61,4 @@ const Pgae = () => {
   );
 };
 
-export default Pgae;
+

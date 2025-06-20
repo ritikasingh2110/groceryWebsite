@@ -1,6 +1,5 @@
-// src/Store/Cart.js
-import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 const useCartStore = create(
   persist(
@@ -11,7 +10,9 @@ const useCartStore = create(
         if (exists) {
           set((state) => ({
             cart: state.cart.map((item) =>
-              item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+              item.id === product.id
+                ? { ...item, quantity: item.quantity + 1 }
+                : item
             ),
           }));
         } else {
@@ -21,9 +22,12 @@ const useCartStore = create(
         }
       },
       removeFromCart: (id) => {
-        set((state) => ({
-          cart: state.cart.filter((item) => item.id !== id),
-        }));
+        set((state) => {
+          const newCart = [...state.cart];
+          const index = newCart.findIndex((item) => item.id === id);
+          if (index !== -1) newCart.splice(index, 1);
+          return { cart: newCart };
+        });
       },
       increaseQty: (id) => {
         set((state) => ({
@@ -43,13 +47,13 @@ const useCartStore = create(
       },
       getTotalPrice: () => {
         return get().cart.reduce((acc, item) => {
-          const price = parseInt(item.price.replace(/[^\d]/g, ''));
+          const price = parseInt(item.price.replace(/[^\d]/g, ""));
           return acc + price * item.quantity;
         }, 0);
       },
     }),
     {
-      name: 'grocery-cart',
+      name: "grocery-cart",
     }
   )
 );

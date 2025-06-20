@@ -1,11 +1,10 @@
-// src/components/ProductDetails.jsx
+
 import { useParams, Link } from "react-router-dom";
 import useCartStore from "../Store/Cart";
 import React from "react";
 
-// import fruits from "../data/fruits"; // move your fruit array to a new file like /data/fruits.js
 
-const Detail = () => {
+export default function Detail(){
   const { id } = useParams();
   const product = fruits.find((item) => item.id === parseInt(id));
   const addToCart = useCartStore((state) => state.addToCart);
@@ -41,4 +40,4 @@ const Detail = () => {
   );
 };
 
-export default Detail;
+

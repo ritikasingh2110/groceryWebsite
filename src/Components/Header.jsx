@@ -1,9 +1,9 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import useCartStore from "../Store/Cart";
-import photu from "../assets/logo.png"; // ✅ Ensure this path is correct
+import photu from "../assets/logo.png";
 
-const Header = () => {
+export default function Header() {
   const cart = useCartStore((state) => state.cart);
   const location = useLocation();
 
@@ -20,21 +20,20 @@ const Header = () => {
           <h1 className="text-xl font-bold tracking-wide">FreshBasket</h1>
         </Link> */}
         <Link to="/" className="flex items-center gap-3">
-  <img
+          <img
             src={photu}
             alt="Grocery Logo"
             className="w-10 h-10 object-contain"
           />
-  <div>
-    <h1 className="text-2xl font-bold text-white tracking-wide leading-tight">
-      Fresh<span className="text-[#B6D9E0]">Basket</span>
-    </h1>
-    <p className="text-xs text-[#DBE2DC] font-light -mt-1">
-      by Ritika Singh
-    </p>
-  </div>
-</Link>
-
+          <div>
+            <h1 className="text-2xl font-bold text-white tracking-wide leading-tight">
+              Fresh<span className="text-[#B6D9E0]">Basket</span>
+            </h1>
+            <p className="text-xs text-[#DBE2DC] font-light -mt-1">
+              by Ritika Singh
+            </p>
+          </div>
+        </Link>
 
         {/* Navigation */}
         <nav className="flex gap-6 items-center text-lg">
@@ -47,10 +46,7 @@ const Header = () => {
             Home
           </Link>
 
-          <Link
-            to="/cart"
-            className="relative hover:text-[#B6D9E0] transition"
-          >
+          <Link to="/cart" className="relative hover:text-[#B6D9E0] transition">
             🛒
             {cart.length > 0 && (
               <span className="absolute -top-2 -right-3 bg-[#74A8A4] text-white text-xs font-semibold px-2 py-0.5 rounded-full">
@@ -62,6 +58,4 @@ const Header = () => {
       </div>
     </header>
   );
-};
-
-export default Header;
+}
